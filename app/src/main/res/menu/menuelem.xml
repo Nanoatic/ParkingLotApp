@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_login"
+        android:enabled="true"
+        android:icon="@drawable/login"
+        android:title="Login"
+        android:visible="true"
+
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_signup"
+        android:enabled="true"
+        android:icon="@drawable/account_plus"
+        android:title="Signup"
+        android:visible="true"
+
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_logout"
+        android:enabled="true"
+        android:icon="@drawable/logout"
+        android:title="Logout"
+        android:visible="true"
+
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/syncing"
+
+        android:icon="@drawable/sync"
+        android:title="sync"
+        android:visible="true"
+        app:showAsAction="ifRoom"
+        />
+
+</menu>
