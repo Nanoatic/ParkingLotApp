@@ -1,19 +1,16 @@
 package com.example.alaeddine.project_neo.fragments;
 
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Resources;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.location.Location;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
@@ -25,7 +22,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RatingBar;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,9 +40,7 @@ import com.example.alaeddine.project_neo.models.Booking;
 import com.example.alaeddine.project_neo.models.ParkingLot;
 import com.example.alaeddine.project_neo.models.Rated;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.LatLng;
 import com.squareup.picasso.Picasso;
-import com.utils.ReadTask;
 
 import java.sql.Date;
 import java.text.DateFormat;
@@ -58,7 +52,6 @@ import java.util.Locale;
 import static android.app.Activity.RESULT_OK;
 import static com.example.alaeddine.project_neo.Constants.LOGIN_CODE;
 import static com.example.alaeddine.project_neo.Constants.SERVER_IP;
-import static com.example.alaeddine.project_neo.Helper_Class.getMapsApiDirectionsUrl;
 import static com.example.alaeddine.project_neo.Helper_Class.is_open;
 
 /**
@@ -66,8 +59,8 @@ import static com.example.alaeddine.project_neo.Helper_Class.is_open;
  */
 
 public class Parking_Fragment extends Fragment {
-    private ParkingLot parkingLot ;
     SharedPreferences preferences;
+    private ParkingLot parkingLot;
     private GoogleMap googleMap;
     private Location currentLocation;
     private Menu menum;
@@ -306,7 +299,7 @@ public class Parking_Fragment extends Fragment {
                         exitNote.setPadding(20, 25, 20, 25);
                         layout.addView(exitNote);
                         new AlertDialog.Builder(new ContextThemeWrapper(getContext(), R.style.AppTheme_Dark_Dialog))
-                                .setTitle("Rating ")
+                                .setTitle("Booking ")
                                 .setView(layout)
                                 .setIcon(R.drawable.money_bag)
                                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
